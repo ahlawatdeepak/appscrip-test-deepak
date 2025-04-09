@@ -1,0 +1,57 @@
+.filterSidebar {
+    width: 100%;
+    font-family: sans-serif;
+  }
+  
+  /* Each filter category container */
+  .filterGroup {
+    margin-bottom: 1rem;
+  }
+  
+  /* Accordion Button */
+  .filterAccordion {
+    width: 100%;
+    text-align: left;
+    border: none;
+    background: #f9f9f9;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+  }
+  
+  .filterAccordion:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Drop-down chevron icon */
+  .chevron {
+    font-size: 0.8rem;
+    color: #666;
+  }
+  
+  /* Options wrapper (displayed when category is open) */
+  .filterOptions {
+    background-color: #fff;
+    border: 1px solid #eee;
+    padding: 0.75rem 1rem;
+  }
+  
+  /* Individual checkbox option */
+  .optionLabel {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    text-transform: capitalize;
+  }
+  
+  .optionCheckbox {
+    margin-right: 0.5rem;
+    cursor: pointer;
+  }
+  

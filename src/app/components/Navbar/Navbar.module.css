@@ -1,0 +1,122 @@
+/* Top black bar */
+.topBar {
+    background-color: #000;
+    color: #d45d78;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    font-size: 0.875rem;
+    flex-wrap: wrap;
+  }
+  
+  .topBarItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .icon {
+    font-size: 1rem;
+  }
+  
+  /* Header row */
+  .headerRow {
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white;
+  }
+  
+  .logoSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hamburgerIcon {
+    font-size: 1.5rem;
+    display: none; /* mobile only */
+  }
+  
+  .centerLogoText {
+    font-weight: 700;
+    font-size: 2rem;
+    
+  }
+  
+  .iconSection {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.25rem;
+    color: #1c1c1c;
+  }
+  
+  .language {
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+  
+  /* Nav links row */
+  .navLinksRow {
+    padding: 1rem 0;
+    background-color: white;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .navLinks {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navLinks li a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #1c1c1c;
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+  
+
+  @media (max-width: 768px) {
+    
+    .topBarItem:not(:first-child) {
+      display: none;
+    }
+  
+    .topBar {
+      justify-content: center;
+      padding: 0.5rem 1rem;
+    }
+  
+    .headerRow {
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid #eee;
+    }
+  
+    .hamburgerIcon {
+      display: block;
+    }
+  
+  
+  
+    .userIcon,
+    .language {
+      display: none;
+    }
+  
+    .iconSection {
+      gap: 1rem;
+    }
+  
+    .navLinksRow {
+      display: none;
+    }
+  }
+  

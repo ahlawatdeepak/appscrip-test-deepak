@@ -1,0 +1,155 @@
+.productListingPage {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* TOP BAR */
+  .topBar {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .itemsCount {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .hideFilterBtn {
+    margin-left: 2rem; /* space from itemsCount */
+    border: none;
+    background: none;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .hideFilterBtn:hover {
+    text-decoration: none;
+  }
+  
+  /* RECOMMENDED DROPDOWN */
+  .recommended {
+    margin-left: auto; /* push to far right */
+  }
+  
+  .sortSelect {
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+    padding: 0.4rem 0.5rem;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  /* MAIN CONTENT LAYOUT */
+  .contentWrapper {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 270px;
+    border-right: 1px solid #eee;
+    padding: 1rem;
+  }
+  
+  .productsSection {
+    flex: 1;
+    padding: 1rem 2rem;
+  }
+  
+  .productsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+    align-items: start;
+  }
+  
+  .filterBtnContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+   
+  }
+  
+  .closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 300; /* Ensure it's above the sidebar content */
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      display: none;
+    }
+
+    .itemsCount {
+      display: none;
+    }
+
+    .productsSection {
+      position: relative;
+    }
+
+    .overlayFilter {
+      position: absolute;
+    
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+      z-index: 1000; /* Ensure it appears above other content */
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      overflow-y: auto;
+    }
+
+    .overlayFilter > div {
+      background-color: white;
+      width: 80%;
+      max-width: 300px;
+      height: 100%;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+      padding: 1rem;
+      overflow-y: auto;
+    }
+
+    .filterBtn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    .topBar{
+      border-top: 1px solid #747474;
+      border-bottom: 1px solid #747474;
+      padding: 0.5rem 1rem;
+
+    }
+
+    .sortSelect{
+      border: none;
+      text-transform: uppercase;
+      border-left: 1px solid #747474;
+      background-color: white;
+    }
+  }
